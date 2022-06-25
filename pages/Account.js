@@ -1,7 +1,8 @@
 import {Text, View} from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import {useEffect, useState} from "react";
-import Login from "../component/login";
+import Login from "../component/user/login";
+import User from "../component/user/user";
 
 export default function Account(){
     const [log,setLog] = useState(false)
@@ -18,7 +19,7 @@ export default function Account(){
     },[])
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            {log ? <Text>Connecter</Text> : <Login/>}
+            {log ? <User setLog={setLog}/> : <Login setLog={setLog}/>}
         </View >
     )
 }

@@ -5,7 +5,7 @@ export async function getHeader(){
     const token = await getToken();
     return {
         headers: {
-            authorization: "Bearer " + token
+            authorization: "Bearer " + JSON.parse(token)
         }
     }
 }

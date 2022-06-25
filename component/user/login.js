@@ -1,9 +1,9 @@
 import {StyleSheet, Button, Text, TextInput, View} from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import {useState} from "react";
-import {authenticate} from "../api/userApi";
+import {authenticate} from "../../api/userApi";
 
-export default function Login(){
+export default function Login(props){
     const [email,setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [error,setError] = useState("")
@@ -12,7 +12,7 @@ export default function Login(){
         try{
             const data = await authenticate({email:email,password:password})
             await AsyncStorage.setItem('token',JSON.stringify(data.access_token))
-            console.log(data)
+            props.setLog(true)
         }catch (e){
             setError("Erreur d'email ou de mot passe")
         }
