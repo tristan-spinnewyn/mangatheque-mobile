@@ -47,8 +47,8 @@ export default function Tome({route,navigation}){
     return(
         <View style={{flex:1}}>
             <Text style={{ fontSize:25}}>{tome.edition.serie.nameSeries} - Tome n°{tome.numero}</Text>
-            {collection ? <TouchableOpacity style={{backgroundColor:'#db4a2b', height:40,width:300}} onPress={delTome}><Text>Supprimer le tome !</Text></TouchableOpacity> :
-                <TouchableOpacity onPress={addTome} style={{backgroundColor:'#db4a2b', height:40,width:300}}><Text>Ajouter le tome !</Text></TouchableOpacity>}
+            {collection ? <TouchableOpacity style={{backgroundColor:'#db4a2b', height:40,width:300, justifyContent:'center',alignItems:"center"}} onPress={delTome}><Text>Supprimer le tome !</Text></TouchableOpacity> :
+                <TouchableOpacity onPress={addTome} style={{backgroundColor:'#db4a2b', height:40,width:300, justifyContent:'center',alignItems:"center"}}><Text>Ajouter le tome !</Text></TouchableOpacity>}
             <View style={{ marginTop:15 }}>
                 <Text style={{fontSize:20}}>Série</Text>
                 <TouchableOpacity onPress={() => navigation.navigate('Serie',{
