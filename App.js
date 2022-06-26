@@ -10,6 +10,9 @@ import Rechercher from "./pages/Rechercher";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import { Ionicons } from '@expo/vector-icons';
 import Tome from "./pages/Tome";
+import Serie from "./pages/Serie";
+import Editeur from "./pages/Editeur";
+import Auteur from "./pages/Auteur";
 
 const Tab = createBottomTabNavigator()
 const Stack = createNativeStackNavigator();
@@ -45,6 +48,9 @@ function MyTabs(){
           <Tab.Screen name="Collection" component={Collection}/>
           <Tab.Screen name="Rechercher" component={Rechercher}/>
           <Tab.Screen options={{ tabBarButton: (props) => null,tabBarVisible: false,}} name="Tome" component={Tome}/>
+          <Tab.Screen options={{ tabBarButton: (props) => null,tabBarVisible: false,}} name="Serie" component={Serie}/>
+          <Tab.Screen options={{ tabBarButton: (props) => null,tabBarVisible: false,}} name="Editeur" component={Editeur}/>
+          <Tab.Screen options={{ tabBarButton: (props) => null,tabBarVisible: false,}} name="Auteur" component={Auteur}/>
   </Tab.Navigator>)
 }
 

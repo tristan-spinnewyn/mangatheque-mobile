@@ -20,8 +20,8 @@ export default function Login(props){
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             <Text>Login</Text>
-            <TextInput style={styles.input} value={email} onChangeText={setEmail}/>
-            <TextInput style={styles.input} value={password} onChangeText={setPassword} secureTextEntry={true}/>
+            <TextInput placeholder="Email" style={styles.input} value={email} onChangeText={setEmail}/>
+            <TextInput placeholder="Mot de passe" style={styles.input} value={password} onChangeText={setPassword} secureTextEntry={true}/>
             <Text>{error}</Text>
             <Button onPress={login} color="#db4a2b" title="Se connecter"/>
         </View >
