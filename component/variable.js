@@ -1,0 +1,1 @@
+export const optionsStatutEdition = [{value:1,label:'En cours'},{value:2, label: 'Terminer'},{value:3,label:'Abandonner'}]

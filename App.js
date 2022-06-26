@@ -12,6 +12,7 @@ import Serie from "./pages/Serie";
 import Editeur from "./pages/Editeur";
 import Auteur from "./pages/Auteur";
 import * as React from 'react';
+import Edition from "./pages/Edition";
 
 const Tab = createBottomTabNavigator()
 
@@ -50,6 +51,7 @@ function MyTabs(){
           <Tab.Screen options={{ tabBarButton: (props) => null,tabBarVisible: false,}} name="Serie" component={Serie}/>
           <Tab.Screen options={{ tabBarButton: (props) => null,tabBarVisible: false,}} name="Editeur" component={Editeur}/>
           <Tab.Screen options={{ tabBarButton: (props) => null,tabBarVisible: false,}} name="Auteur" component={Auteur}/>
+          <Tab.Screen options={{ tabBarButton: (props) => null,tabBarVisible: false,}} name="Edition" component={Edition}/>
   </Tab.Navigator>)
 }
 
