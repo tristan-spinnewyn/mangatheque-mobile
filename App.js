@@ -9,46 +9,48 @@ import Collection from "./pages/Collection";
 import Rechercher from "./pages/Rechercher";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import { Ionicons } from '@expo/vector-icons';
+import Tome from "./pages/Tome";
 
 const Tab = createBottomTabNavigator()
-
+const Stack = createNativeStackNavigator();
 function MyTabs(){
-  return (<Tab.Navigator
-      screenOptions={({ route }) => ({
-        tabBarIcon: ({ focused, color, size }) => {
-          let iconName;
+  return (
+      <Tab.Navigator
+          screenOptions={({ route }) => ({
+            tabBarIcon: ({ focused, color, size }) => {
+              let iconName;
 
-          if (route.name === 'Home') {
-            iconName = focused
-                ? 'ios-home'
-                : 'ios-home-outline';
-          } else if (route.name === 'Planning') {
-            iconName = focused ? 'ios-calendar' : 'ios-calendar-outline';
-          } else if(route.name === 'Account'){
-              iconName = focused ? 'ios-person-circle' : 'ios-person-circle-outline'
-          } else if(route.name === 'Collection'){
-              iconName = focused ? 'ios-book' : 'ios-book-outline'
-          } else if(route.name === 'Rechercher')
-              iconName = focused ? 'ios-search-circle' : 'ios-search-circle-outline'
+              if (route.name === 'Home') {
+                iconName = focused
+                    ? 'ios-home'
+                    : 'ios-home-outline';
+              } else if (route.name === 'Planning') {
+                iconName = focused ? 'ios-calendar' : 'ios-calendar-outline';
+              } else if(route.name === 'Account'){
+                  iconName = focused ? 'ios-person-circle' : 'ios-person-circle-outline'
+              } else if(route.name === 'Collection'){
+                  iconName = focused ? 'ios-book' : 'ios-book-outline'
+              } else if(route.name === 'Rechercher')
+                  iconName = focused ? 'ios-search-circle' : 'ios-search-circle-outline'
 
-          // You can return any component that you like here!
-          return <Ionicons name={iconName} size={size} color={color} />;
-        },
-        tabBarActiveTintColor: 'tomato',
-        tabBarInactiveTintColor: 'gray',
-      })}
-  >
-      <Tab.Screen name="Home" component={HomeScreen}/>
-      <Tab.Screen name="Planning" component={Planning}/>
-      <Tab.Screen name="Account" component={Account}/>
-      <Tab.Screen name="Collection" component={Collection}/>
-      <Tab.Screen name="Rechercher" component={Rechercher}/>
+              // You can return any component that you like here!
+              return <Ionicons name={iconName} size={size} color={color} />;
+            },
+            tabBarActiveTintColor: 'tomato',
+            tabBarInactiveTintColor: 'gray',
+          })}>
+          <Tab.Screen name="Home" component={HomeScreen}/>
+          <Tab.Screen name="Planning" component={Planning}/>
+          <Tab.Screen name="Account" component={Account}/>
+          <Tab.Screen name="Collection" component={Collection}/>
+          <Tab.Screen name="Rechercher" component={Rechercher}/>
+          <Tab.Screen options={{ tabBarButton: (props) => null,tabBarVisible: false,}} name="Tome" component={Tome}/>
   </Tab.Navigator>)
 }
 
 export default function App() {
 
-  const Stack = createNativeStackNavigator();
+
 
   return (
       <NavigationContainer>
