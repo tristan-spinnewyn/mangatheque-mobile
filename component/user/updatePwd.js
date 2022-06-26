@@ -1,6 +1,7 @@
 import {Button, StyleSheet, Text, TextInput, View} from "react-native";
 import {useEffect, useState} from "react";
-import {updateConnectedUser, updatePasswordConnectedUser} from "../../api/userApi";
+import { updatePasswordConnectedUser} from "../../api/userApi";
+import * as React from 'react';
 
 export default function UpdatePwd(props){
     const [email,setEmail] = useState(props.email)

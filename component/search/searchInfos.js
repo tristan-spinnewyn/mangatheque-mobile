@@ -4,6 +4,7 @@ import {getAuthor} from "../../api/auteurApi";
 import {getEditor} from "../../api/editeurApi";
 import {getSerie} from "../../api/serieApi";
 import SearchElem from "./searchElem";
+import * as React from 'react';
 
 export default function SearchInfos(props){
     const [lstElem,setLstElem] = useState([])

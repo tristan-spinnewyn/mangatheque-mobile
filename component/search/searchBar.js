@@ -1,4 +1,5 @@
 import {StyleSheet, TextInput, View} from "react-native";
+import * as React from 'react';
 
 export default function SearchBar(props){
     return (

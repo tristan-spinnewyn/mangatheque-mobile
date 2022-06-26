@@ -2,6 +2,7 @@ import {ScrollView, Text, View} from "react-native";
 import {useEffect, useState} from "react";
 import {getLastTome} from "../api/tomeApi";
 import TomeComponent from "../component/home/tomeComponent";
+import * as React from 'react';
 
 export default function HomeScreen({navigation}){
     const [tomes,setTomes] = useState(null)

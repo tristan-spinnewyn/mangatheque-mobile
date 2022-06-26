@@ -1,6 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import HomeScreen from "./pages/HomeScreen";
 import {NavigationContainer} from "@react-navigation/native";
 import Planning from "./pages/Planning";
@@ -13,9 +11,10 @@ import Tome from "./pages/Tome";
 import Serie from "./pages/Serie";
 import Editeur from "./pages/Editeur";
 import Auteur from "./pages/Auteur";
+import * as React from 'react';
 
 const Tab = createBottomTabNavigator()
-const Stack = createNativeStackNavigator();
+
 function MyTabs(){
   return (
       <Tab.Navigator

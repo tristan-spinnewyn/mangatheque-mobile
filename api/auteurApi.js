@@ -6,10 +6,10 @@ export async function getAuthor(name){
     let url = `${url_api}/auteurs`
     let res;
     if(name === ""){
-        res = await axios.get(url,HEADER)
+        res = await axios.get(url)
     } else {
         url += `?name=${name}`
-        res = await axios.get(url,HEADER)
+        res = await axios.get(url)
     }
     return res.data;
 }

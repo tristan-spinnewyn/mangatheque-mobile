@@ -1,6 +1,7 @@
 import {Button, StyleSheet, Text, TextInput, View} from "react-native";
 import {useEffect, useState} from "react";
 import {updateConnectedUser} from "../../api/userApi";
+import * as React from 'react';
 
 export default function Member(props){
     const [email,setEmail] = useState(props.email)

@@ -1,5 +1,5 @@
 import {Text, TouchableOpacity, View, StyleSheet} from "react-native";
-import button from "react-native-web/dist/exports/Button";
+import * as React from 'react';
 
 export default function ChoiceSearch(props){
     const setWhatIs = (what)=>{

@@ -4,6 +4,7 @@ import Member from "./member";
 import {getConnectedUser} from "../../api/userApi";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import UpdatePwd from "./updatePwd";
+import * as React from 'react';
 
 export default function User(props){
     const [email,setEmail] = useState('')

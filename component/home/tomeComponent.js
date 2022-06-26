@@ -1,4 +1,5 @@
 import {Dimensions, Image, Text, TouchableOpacity, View} from "react-native";
+import * as React from 'react';
 
 export default function TomeComponent({navigation,id,imageCouverture,serieName,numero}){
     var width = Dimensions.get('window').width;

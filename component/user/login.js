@@ -2,6 +2,7 @@ import {StyleSheet, Button, Text, TextInput, View} from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import {useState} from "react";
 import {authenticate} from "../../api/userApi";
+import * as React from 'react';
 
 export default function Login(props){
     const [email,setEmail] = useState("")

@@ -3,6 +3,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import {useEffect, useState} from "react";
 import Login from "../component/user/login";
 import User from "../component/user/user";
+import * as React from 'react';
 
 export default function Account(){
     const [log,setLog] = useState(false)
