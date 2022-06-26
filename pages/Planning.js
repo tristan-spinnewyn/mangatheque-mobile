@@ -31,8 +31,8 @@ export default function Planning({navigation}){
         <ScrollView style={{flex:1}}>
             {date.map((value,index)=>{
                 return(
-                    <View style={{alignItems:'center'}}>
-                        <Text style={{width:'100%',height:40,backgroundColor:'#222222',color:'white',textAlign: 'center'}}>{new Date(value.date).toLocaleDateString()}</Text>
+                    <View style={{alignItems:'center'}} key={index}>
+                        <Text style={{width:'100%',height:40,backgroundColor:'#222222',color:'white',textAlign: 'center',textAlignVertical: 'center'}}>{new Date(value.date).toLocaleDateString()}</Text>
                         <View>
                             {value.tomes.map((value,index)=>{
                                 return (<TouchableOpacity style={{ borderBottomWidth:1, borderBottomColor:'#CCCCCC',alignItems:'center'}} key={index} onPress={() => navigation.navigate('Tome',{
