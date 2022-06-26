@@ -13,3 +13,10 @@ export async function getAuthor(name){
     }
     return res.data;
 }
+
+export async function getAuthorById(id){
+    const url = `${url_api}/auteurs/${id}`
+    const res = await axios.get(url)
+
+    return res.data[0];
+}
