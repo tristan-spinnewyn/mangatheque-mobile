@@ -19,7 +19,7 @@ export default function Auteur({route, navigation}){
             <Text style={{ fontSize:30}}>{auteur ? auteur.nameAuteur : ''}</Text>
             <ScrollView style={{marginTop:10}}>
                 {auteur ? auteur.series.map((value,index)=>{
-                    return (<TouchableOpacity onPress={() => navigation.navigate('Serie',{
+                    return (<TouchableOpacity style={{height:40, borderBottomWidth:1, borderBottomColor:'#CCCCCC'}} key={index} onPress={() => navigation.navigate('Serie',{
                         itemId:value.id
                     })}>
                         <Text>{value.nameSeries}</Text>
