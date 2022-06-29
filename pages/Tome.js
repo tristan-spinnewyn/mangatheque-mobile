@@ -14,8 +14,8 @@ export default function Tome({route,navigation}){
     const [collection,setCollection] = useState(false)
     const getTome = async () => {
         const data = await getTomeById(itemId)
-        await getTomeCollection()
         setTome(data[0])
+        await getTomeCollection()
 
     }
     const getTomeCollection = async()=>{
